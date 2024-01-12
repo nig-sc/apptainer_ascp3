@@ -46,8 +46,9 @@ Usage: ascp [OPTION] SRC... DEST
 例えば https://ena-docs.readthedocs.io/en/latest/retrieval/file-download.html#using-aspera の例を実行すると以下のようになります。
 
 ```
-$ apptainer exec ascp3_ubuntu22.sif ~/.aspera/connect/bin/ascp -T -l 300m -P 33001 -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh era-fas
-p@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz ./
+$ apptainer exec ascp3_ubuntu22.sif ~/.aspera/connect/bin/ascp -T -l 300m -P 33001 \
+ -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh \
+ era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz ./
 ERR164407.fastq.gz                                                                  100%  72MB 37.7Mb/s   01:58
 Completed: 74523K bytes transferred in 118 seconds
  (5132K bits/sec), in 1 file.
